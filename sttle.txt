@@ -1,0 +1,56 @@
+
+
+
+
+
+
+
+
+
+
+/* *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    text-align: center;
+    height: 100vh;
+    background-color: rgb(187, 93, 155);
+}
+
+.container{
+    font-size: 2rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    /* transform: translate(-50%, -50%); */
+    text-align: center;
+    color: white; /* Moved color to the container */
+}
+
+.container .text.first-text{
+    color: white;
+}
+
+.text.sec-text::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0; /* Adjusted position to fix the border alignment */
+    height: 100%;
+    width: 100%;
+    background-color: red;
+    border-left: 2px solid blue;
+    animation: animate 4s linear infinite; /* Changed steps to linear */
+}
+
+@keyframes animate{
+    0%{
+        transform: translateX(0%);
+    }
+    100%{
+        transform: translateX(100%); /* Simplified animation */
+    }
+} */

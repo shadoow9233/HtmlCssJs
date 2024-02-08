@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<hr lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auto Typing</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   
+    <div class="container">
+        <span class="text first-text">I am</span>
+        <span class="text sec-text"></span>
+    </div> 
+
+
+    <script>
+        const text=document.querySelector(".sec-text");
+        const textLoad=()=>{
+            setTimeout(()=>{
+                text.textContent="Developer";
+            },0);
+
+            setTimeout(()=>{
+                text.textContent="Gamer";
+            },4000);
+
+            setTimeout(()=>{
+                text.textContent="Youtuber";
+            },8000);
+        }
+        textLoad();
+
+    </script>
+</body>
+</html>
