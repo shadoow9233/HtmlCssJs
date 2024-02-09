@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Javascript tabs</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="hero">
+      <div class="btn_box">
+        <button id="btn1" onclick="openHtml()">
+          <i class="fab fa-html5"></i> HTML
+        </button>
+        <button id="btn2" onclick="openCss()">
+          <i class="fab fa-css3-alt"></i> CSS
+        </button>
+        <button id="btn3" onclick="openJs()">
+          <i class="fab fa-js"></i> JavaScript
+        </button>
+      </div>
+
+      <div id="content1" class="content">
+        <div class="content_left">
+          <h1>Learn Html</h1>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio
+            doloribus quo labore hic iusto, expedita officiis ipsum qui, facere
+            ipsam molestias nesciunt omnis accusamus vel perferendis repudiandae
+            numquam rerum veniam.
+          </p>
+          <a href="#">Watch Video</a>
+        </div>
+        <div class="content_right">
+          <img
+            src="https://www.udacity.com/blog/wp-content/uploads/2020/06/HTML_Blog-scaled.jpeg"
+            alt=""
+          />
+        </div>
+      </div>
+
+      <div id="content2" class="content">
+        <div class="content_left">
+          <h1>Learn Css</h1>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio
+            doloribus quo labore hic iusto, expedita officiis ipsum qui, facere
+            ipsam molestias nesciunt omnis accusamus vel perferendis repudiandae
+            numquam rerum veniam.
+          </p>
+          <a href="#">Watch Video</a>
+        </div>
+        <div class="content_right">
+          <img
+            src="https://cdn6.aptoide.com/imgs/a/6/a/a6a6fef6c50732486bfacedf97417fc1_fgraphic.jpg"
+            alt=""
+          />
+        </div>
+      </div>
+
+      <div id="content3" class="content">
+        <div class="content_left">
+          <h1>Learn JavaScript</h1>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio
+            doloribus quo labore hic iusto, expedita officiis ipsum qui, facere
+            ipsam molestias nesciunt omnis accusamus vel perferendis repudiandae
+            numquam rerum veniam.
+          </p>
+          <a href="#">Watch Video</a>
+        </div>
+        <div class="content_right">
+          <img
+            src="https://assets-global.website-files.com/60f8ffe4d3ddfa64654d6667/6555ee395de4aec6b9b4e42c_Web-blog-15-4.webp"
+            alt=""
+          />
+        </div>
+      </div>
+    </div>
+
+    <script>
+      var content1 = document.getElementById("content1");
+      var content2 = document.getElementById("content2");
+      var content3 = document.getElementById("content3");
+      var btn1 = document.getElementById("btn1");
+      var btn2 = document.getElementById("btn2");
+      var btn3 = document.getElementById("btn3");
+
+      function openHtml() {
+        content1.style.transform = "translateX(0)";
+        content2.style.transform = "translateX(100%)";
+        content3.style.transform = "translateX(100%)";
+      }
+
+      function openCss() {
+        content1.style.transform = "translateX(100%)";
+        content2.style.transform = "translateX(0)";
+        content3.style.transform = "translateX(100%)";
+      }
+
+      function openJs() {
+        content1.style.transform = "translateX(100%)";
+        content2.style.transform = "translateX(100%)";
+        content3.style.transform = "translateX(0)";
+      }
+    </script>
+  </body>
+</html>
