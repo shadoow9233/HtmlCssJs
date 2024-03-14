@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input event</title>
+</head>
+<body>
+    <section>
+        <input type="text" id="myInput" name="inputField">
+        <div class="output">
+            <p class="inputValue"></p>
+            <p class="inputName"></p>
+            <p class="inputType"></p>
+            <p class="eventType"></p>
+        </div>
+        
+    </section>
+
+    <script>
+        const inputElem=document.getElementById("myInput");
+        const handleInputEvent=(event)=>{
+            console.log(event);
+
+            console.log("Input value:",event.target.value);
+            console.log("Input Name",event.target.name);
+            console.log("Input Type",event.inputType);
+            console.log("event type",event.type)
+
+            document.querySelector(".inputValue").textContent = `Input value: ${event.target.value}`;
+            document.querySelector(".inputName").textContent = `Input Name: ${event.target.name}`;
+            document.querySelector(".inputType").textContent = `Input Type: ${event.inputType}`;
+            document.querySelector(".eventType").textContent = `Event type: ${event.type}`;
+
+        };
+
+
+        inputElem.addEventListener("change",handleInputEvent);
+
+    </script>
+</body>
+</html>

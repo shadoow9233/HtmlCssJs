@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+
+    <style>
+
+        .addTransition3 {
+            border-radius: 50%;
+            background-color: #f5ee62;
+            transform: translateX(-30rem);
+        }
+        .addTransition4 {
+            border-radius: 50%;
+            background-color: #f5ee62;
+            transform: translateX(30rem);
+        }
+        .addTransition5 {
+            border-radius: 50%;
+            background-color: #f5ee62;
+            transition: background-color 1s;
+        }
+
+        .rectangle {
+            width: 200px;
+            height: 200px;
+            background-color: black; 
+            transition: all 0.6s linear;
+        }
+    </style>
+
+</head>
+<body>
+    <section>
+        <div class="rectangle"></div>
+        <div id="myButton">Click Me</div>
+    </section>
+
+    <script>
+        let myButton = document.getElementById("myButton");
+        let rectDiv = document.querySelector(".rectangle");
+
+        const handleMouseEvents = () => {
+            rectDiv.classList.toggle("addTransition3");
+        }
+
+        const handleMouseEvents2 = () => {
+            rectDiv.classList.toggle("addTransition4");
+        }
+
+        const handleMouseEvents3 = () => {
+            rectDiv.classList.toggle("addTransition5");
+        }
+
+        // Adding event listeners to the button
+        myButton.addEventListener("mouseover", handleMouseEvents);
+        myButton.addEventListener("mouseleave", handleMouseEvents);
+
+        myButton.addEventListener("click", handleMouseEvents2);
+
+        // Adding event listener to the rectangle for a different event
+        rectDiv.addEventListener("dblclick", handleMouseEvents3);
+    </script>
+</body>
+</html>

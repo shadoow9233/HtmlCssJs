@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    
+    <h1>Inline Events </h1>
+    <button onclick="alert('Welcome ')">Greeting</button>
+    <button ondblclick="alert('welcome to Shadoow world')">Greeting Again</button>
+    <button onmouseover="alert('Welcome Shadoow ')">Greeting</button>
+
+    <h1>Dom  Events Handler </h1>
+    <button id="mybtn1">Greeting</button>
+    <button id="mybtn2" ondblclick="alert('welcome to Shadoow world')">Greeting Again</button>
+
+    <h1>AddEventListen Event handler </h1>
+    <button id="mybtn3" onclick="alert('Welcome ')">Greeting</button>
+    <button id="mybtn4">Greeting Again</button>
+
+<script>
+    document.getElementById("mybtn1").onclick = () => {
+        alert('Welcome');
+    };
+    document.getElementById("mybtn2").ondblclick=()=>{
+        "('welcome to Shadoow world')" ;
+    }
+
+    document.getElementById("mybtn3").addEventListener("click", () => {
+        alert('Welcome');
+    });
+    
+    document.getElementById("mybtn4").addEventListener("click", () => {
+        alert('Welcome again to dark world');
+    });
+    
+
+
+</script>
+
+</body>
+</html>
