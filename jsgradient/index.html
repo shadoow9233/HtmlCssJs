@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <section class="gradient">
+        <div class="Button">
+            <button class="button1">btn1</button>
+            <button class="button2">btn2</button>
+         </div>
+         <h1>Js gradient</h1>
+        <p> background-image: linear-gradient(to right top, #051937, #003454, #00506a, #006d76, #008979);
+        </p>
+
+    </section>
+
+    <script>
+
+        let btn1 = document.querySelector(".button1");
+        let btn2 = document.querySelector(".button2");
+
+        // Define hexValues function
+        const hexValues = () => {
+            let myHexValues = "0123456789abcdef";
+            let colors = "#";
+            for (let i = 0; i < 6; i++) {
+                colors += myHexValues[Math.floor(Math.random() * 16)];
+            }
+            return colors; 
+        };
+
+        // Define handleButton1 function
+        const handleButton1 = () => {
+            let rgb1 = hexValues();
+            console.log(rgb1); 
+            document.body.style.backgroundImage=`linear-gradient(to right top, ${rgb1},#444) `;
+        };
+
+        // Define handleButton2 function
+        const handleButton2 = () => {
+            let rgb2 = hexValues();
+            console.log(rgb2);
+            document.body.style.backgroundImage=`linear-gradient(to right top, ${rgb2},#444) `;
+        };
+
+        
+        
+        btn1.addEventListener("click", handleButton1);
+        btn2.addEventListener("click", handleButton2);
+    </script>
+</body>
+</html>
